@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RemoteWand</string>
-	<string name="CopyRightString">Copyright &#169; 2012 KLab Inc.</string>
-	<string name="ServerUrl">https://remotewand-wands.dotcloud.com/push01</string>
-	<string name="WordYes">はい</string>
-	<string name="WordNo">いいえ</string>
+    <string name="CopyRightString">Copyright &#169; 2012 KLab Inc.</string>
+    <string name="ServerUrl">https://remotewand-wands.dotcloud.com/push01</string>
+    <string name="WordYes">はい</string>
+    <string name="WordNo">いいえ</string>
     <string name="WordAbout">About</string>
-	<string name="WordExit">終了</string>
-	<string name="WordMailSubject">RemoteWand - Your Form</string>
-	<string name="WordRegisterDevice">この端末を登録する</string>
-	<string name="WordUnregisterDevice">登録の解除</string>
-	<string name="WordEnterNoSleep">スリープ防止画面へ</string>
-	<string name="WordPassword">Password</string>
+    <string name="WordExit">終了</string>
+    <string name="WordMailSubject">RemoteWand - Your Form</string>
+    <string name="WordRegisterDevice">この端末を登録する</string>
+    <string name="WordUnregisterDevice">登録の解除</string>
+    <string name="WordEnterNoSleep">スリープ防止画面へ</string>
+    <string name="WordPassword">Password</string>
     <string name="WordDropboxPage">Google Play ： Dropbox のページへ</string>
-	<string name="WordHintPasswordField">登録用パスワード</string>
+    <string name="WordHintPasswordField">登録用パスワード</string>
     <string name="MsgNoSleepMode">この画面の表示中は端末がスリープ状態になりません。アイドル時にすみやかに通知が処理されない場合は、端末を電源に接続しこの画面を表示したままの状態で試して下さい。\r\n\r\n画面をタップするとこの表示の明暗が切り替わります。BACK ボタンで終了します。</string>
-	<string name="MsgNoDropbox">Dropbox をインストールすると撮影した画像を外部から簡単に閲覧できます。メニューから Play ストアへ移動できます。</string>
-	<string name="MsgSpecifyPassword">パスワードを指定して下さい</string>
-	<string name="MsgRegisterDevice">この端末を登録しますか？</string>
-	<string name="MsgUnregisterDevice">この端末の登録を解除しますか？</string>
-	<string name="MsgMailText">添付の HTML フォームをブラウザ上でサブミットすると登録ずみの Android 端末が通知を受け取りカメラで撮影を行います。\n登録を解除したい場合は端末上で RemoteWand を起動し「登録の解除」ボタンを押下して下さい。</string>
-	<string name="MsgCreateMail">登録を完了しました。次に、この端末へブラウザ経由でメッセージを送るための HTML フォームをあなたへメールします。\r\n\r\n※OK ボタン押下後にアプリケーション選択画面が表示された場合は「Gmail」を選択して下さい</string>
-	<string name="MsgUnregistered">登録を解除しました\r\n\r\n※Google サーバ上の解除完了までに多少時間のかかる場合があります</string>
-	<string name="MsgHtmlForm">Android 端末上で登録時に設定した RemoteWand パスワードを入力して「PUSH」ボタンを押下して下さい。端末が通知を受信しカメラで写真を撮影します。</string>
-	<string name="MsgOverView">「登録」を行うと PC 等のウェブブラウザからこの端末のカメラのシャッターを操作できるようになります。「登録の解除」ボタンで解除します。</string>
+    <string name="MsgNoDropbox">Dropbox をインストールすると撮影した画像を外部から簡単に閲覧できます。メニューから Play ストアへ移動できます。</string>
+    <string name="MsgSpecifyPassword">パスワードを指定して下さい</string>
+    <string name="MsgRegisterDevice">この端末を登録しますか？</string>
+    <string name="MsgUnregisterDevice">この端末の登録を解除しますか？</string>
+    <string name="MsgMailText">添付の HTML フォームをブラウザ上でサブミットすると登録ずみの Android 端末が通知を受け取りカメラで撮影を行います。\n登録を解除したい場合は端末上で RemoteWand を起動し「登録の解除」ボタンを押下して下さい。</string>
+    <string name="MsgCreateMail">登録を完了しました。次に、この端末へブラウザ経由でメッセージを送るための HTML フォームをあなたへメールします。\r\n\r\n※OK ボタン押下後にアプリケーション選択画面が表示された場合は「Gmail」を選択して下さい</string>
+    <string name="MsgUnregistered">登録を解除しました\r\n\r\n※Google サーバ上の解除完了までに多少時間のかかる場合があります</string>
+    <string name="MsgHtmlForm">Android 端末上で登録時に設定した RemoteWand パスワードを入力して「PUSH」ボタンを押下して下さい。端末が通知を受信しカメラで写真を撮影します。</string>
+    <string name="MsgOverView">「登録」を行うと PC 等のウェブブラウザからこの端末のカメラのシャッターを操作できるようになります。「登録の解除」ボタンで解除します。</string>
 </resources>

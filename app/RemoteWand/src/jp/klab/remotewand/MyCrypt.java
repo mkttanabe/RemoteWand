@@ -28,81 +28,81 @@ import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 
 public class MyCrypt {
-	private final static String TAG = "RemoteWand";
-	public static String Crypt(String str, String password) {
-		String strCrypt = null;
-		String passStr = password;
-		int len = passStr.length();
-		if (len < 16) {
-			for (int i = 0; i + len < 16; i++) {
-				int num = i;
-				if (num >= 10) {
-					num -= 10;
-				}
-				passStr = passStr + num;
-			}
-		} else if (len > 16) {
-			passStr = passStr.substring(0, 16);
-		}
+    private final static String TAG = "RemoteWand";
+    public static String Crypt(String str, String password) {
+        String strCrypt = null;
+        String passStr = password;
+        int len = passStr.length();
+        if (len < 16) {
+            for (int i = 0; i + len < 16; i++) {
+                int num = i;
+                if (num >= 10) {
+                    num -= 10;
+                }
+                passStr = passStr + num;
+            }
+        } else if (len > 16) {
+            passStr = passStr.substring(0, 16);
+        }
         StringBuffer sb = new StringBuffer(passStr);
         String ivStr = sb.reverse().toString();
         byte[] key = passStr.getBytes();
         byte[] iv  = ivStr.getBytes();
-		
+        
         SecretKey sKey = new SecretKeySpec(key, "AES");
         IvParameterSpec ivParam = new IvParameterSpec(iv);
         Cipher cipher = null;
-		try {
-			cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
-		} catch (NoSuchAlgorithmException e) {
-			_Log.e(TAG, "Crypt: " + e);
-			return null;
-		} catch (NoSuchPaddingException e) {
-			_Log.e(TAG, "Crypt: " + e);
-			return null;
-		}
         try {
-			cipher.init(Cipher.ENCRYPT_MODE, sKey, ivParam);
-		} catch (InvalidKeyException e) {
-			_Log.e(TAG, "Crypt: " + e);
-			return null;
-		} catch (InvalidAlgorithmParameterException e) {
-			_Log.e(TAG, "Crypt: " + e);
-			return null;
-		}        
+            cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
+        } catch (NoSuchAlgorithmException e) {
+            _Log.e(TAG, "Crypt: " + e);
+            return null;
+        } catch (NoSuchPaddingException e) {
+            _Log.e(TAG, "Crypt: " + e);
+            return null;
+        }
+        try {
+            cipher.init(Cipher.ENCRYPT_MODE, sKey, ivParam);
+        } catch (InvalidKeyException e) {
+            _Log.e(TAG, "Crypt: " + e);
+            return null;
+        } catch (InvalidAlgorithmParameterException e) {
+            _Log.e(TAG, "Crypt: " + e);
+            return null;
+        }        
         byte[] dataCrypt = null;
-		try {
-			dataCrypt = cipher.doFinal(str.getBytes());
-		} catch (IllegalBlockSizeException e) {
-			_Log.e(TAG, "Crypt: " + e);
-			return null;
-		} catch (BadPaddingException e) {
-			_Log.e(TAG, "Crypt: " + e);
-			return null;
-		}
-		strCrypt = toHexString(dataCrypt);
+        try {
+            dataCrypt = cipher.doFinal(str.getBytes());
+        } catch (IllegalBlockSizeException e) {
+            _Log.e(TAG, "Crypt: " + e);
+            return null;
+        } catch (BadPaddingException e) {
+            _Log.e(TAG, "Crypt: " + e);
+            return null;
+        }
+        strCrypt = toHexString(dataCrypt);
         _Log.d(TAG, "ENCRYPTED : " + strCrypt);
 
-/* test	
+/* test    
         try {
-			cipher.init(Cipher.DECRYPT_MODE, cipherKey, ivSpec);
-		} catch (InvalidKeyException e) {
-			e.printStackTrace();
-		} catch (InvalidAlgorithmParameterException e) {
-			e.printStackTrace();
-		}
+            cipher.init(Cipher.DECRYPT_MODE, cipherKey, ivSpec);
+        } catch (InvalidKeyException e) {
+            e.printStackTrace();
+        } catch (InvalidAlgorithmParameterException e) {
+            e.printStackTrace();
+        }
         byte[] output = null;
-		try {
-			output = cipher.doFinal(cipherText);
-		} catch (IllegalBlockSizeException e) {
-			e.printStackTrace();
-		} catch (BadPaddingException e) {
-			e.printStackTrace();
-		}    
-		//_Log.d(TAG, "DECRYPTED : " + new String(output));        
+        try {
+            output = cipher.doFinal(cipherText);
+        } catch (IllegalBlockSizeException e) {
+            e.printStackTrace();
+        } catch (BadPaddingException e) {
+            e.printStackTrace();
+        }    
+        //_Log.d(TAG, "DECRYPTED : " + new String(output));        
 */                
-		return strCrypt;
-	}
+        return strCrypt;
+    }
 
     private static String toHexString(byte data[]) {
         StringBuffer buf = new StringBuffer(data.length * 2);

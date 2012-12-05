@@ -26,7 +26,7 @@ import android.view.View.OnClickListener;
 import android.widget.TextView;
 
 public class NoSleepActivity extends Activity implements OnClickListener {
-	private final String TAG = "RemoteWand";
+    private final String TAG = "RemoteWand";
     private WakeLock mWakeLock;
     private TextView mTextView;
     private int mCMode;
@@ -34,32 +34,32 @@ public class NoSleepActivity extends Activity implements OnClickListener {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-    	super.onCreate(savedInstanceState);
-    	setContentView(R.layout.nosleep);
-    	mTextView = (TextView)findViewById(R.id.TextView001);
-    	mTextView.setOnClickListener(this);
-    	// disable sleep mode 
-    	PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
-    	mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, getString(R.string.app_name));
-    	mWakeLock.acquire();
-    	mCMode = 0;;
-    	mTextView.setTextColor(mCTable[0]);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.nosleep);
+        mTextView = (TextView)findViewById(R.id.TextView001);
+        mTextView.setOnClickListener(this);
+        // disable sleep mode 
+        PowerManager pm = (PowerManager)getSystemService(Context.POWER_SERVICE);
+        mWakeLock = pm.newWakeLock(PowerManager.SCREEN_DIM_WAKE_LOCK, getString(R.string.app_name));
+        mWakeLock.acquire();
+        mCMode = 0;;
+        mTextView.setTextColor(mCTable[0]);
     }
-    
-	@Override
-    protected void onDestroy() {
-		_Log.d(TAG, "NoSleepActivity: onDestroy");
-	    super.onDestroy();
-	    mWakeLock.release();
-	}
 
-	@Override
-	public void onClick(View v) {
-		if (v == (View)mTextView) {
-			if (++mCMode > 2) {
-				mCMode = 0;
-			}
-	    	mTextView.setTextColor(mCTable[mCMode]);
-		}
-	}
+    @Override
+    protected void onDestroy() {
+        _Log.d(TAG, "NoSleepActivity: onDestroy");
+        super.onDestroy();
+        mWakeLock.release();
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (v == (View)mTextView) {
+            if (++mCMode > 2) {
+                mCMode = 0;
+            }
+            mTextView.setTextColor(mCTable[mCMode]);
+        }
+    }
 }

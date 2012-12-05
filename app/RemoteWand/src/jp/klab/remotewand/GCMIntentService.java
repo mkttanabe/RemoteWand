@@ -21,7 +21,7 @@ import android.os.Bundle;
 import com.google.android.gcm.GCMBaseIntentService;
 import static jp.klab.remotewand.Constant.SENDER_ID;
 import static jp.klab.remotewand.Constant.MYACTION_NOTIFY;
-import static jp.klab.remotewand.Constant.MYEXTRA_NAME_EVENT;	
+import static jp.klab.remotewand.Constant.MYEXTRA_NAME_EVENT;
 import static jp.klab.remotewand.Constant.MYEXTRA_NAME_REGID;
 import static jp.klab.remotewand.Constant.MYEXTRA_EVENT_REGISTERED;
 import static jp.klab.remotewand.Constant.MYEXTRA_EVENT_UNREGISTERED;
@@ -29,48 +29,48 @@ import static jp.klab.remotewand.Constant.MYEXTRA_EVENT_ERROR;
 import static jp.klab.remotewand.Constant.MYEXTRA_NAME_ERRORID;
 
 public class GCMIntentService extends GCMBaseIntentService {
-	private final String TAG = "RemoteWand";
-	public GCMIntentService() {
-		super(SENDER_ID);
-	}
+    private final String TAG = "RemoteWand";
+    public GCMIntentService() {
+        super(SENDER_ID);
+    }
 
-	@Override
-	protected void onMessage(Context context, Intent intent) {
-		Bundle extras = intent.getExtras();
-		if (extras != null) {
-			String action = (String) extras.get("action");
-			_Log.d(TAG, "GCMIntentService: onMessage: action=" + action);
-			if (action != null && action.equals("camera")) {
-				Intent it = new Intent(getApplicationContext(), CameraActivity.class);
-				it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-				startActivity(it);
-			}
-		}
-	}
+    @Override
+    protected void onMessage(Context context, Intent intent) {
+        Bundle extras = intent.getExtras();
+        if (extras != null) {
+            String action = (String) extras.get("action");
+            _Log.d(TAG, "GCMIntentService: onMessage: action=" + action);
+            if (action != null && action.equals("camera")) {
+                Intent it = new Intent(getApplicationContext(), CameraActivity.class);
+                it.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(it);
+            }
+        }
+    }
 
-	@Override
-	public void onRegistered(Context context, String registrationId) {
-		_Log.d(TAG, "GCMIntentService: onRegistered id=" + registrationId);
-		Intent it = new Intent(MYACTION_NOTIFY);
-		it.putExtra(MYEXTRA_NAME_EVENT, MYEXTRA_EVENT_REGISTERED);
-		it.putExtra(MYEXTRA_NAME_REGID, registrationId);
-		sendBroadcast(it);
-	}
+    @Override
+    public void onRegistered(Context context, String registrationId) {
+        _Log.d(TAG, "GCMIntentService: onRegistered id=" + registrationId);
+        Intent it = new Intent(MYACTION_NOTIFY);
+        it.putExtra(MYEXTRA_NAME_EVENT, MYEXTRA_EVENT_REGISTERED);
+        it.putExtra(MYEXTRA_NAME_REGID, registrationId);
+        sendBroadcast(it);
+    }
 
-	@Override
-	public void onUnregistered(Context context, String registrationId) {
-		_Log.d(TAG, "GCMIntentService: onUnregistered");
-		Intent it = new Intent(MYACTION_NOTIFY);
-		it.putExtra(MYEXTRA_NAME_EVENT, MYEXTRA_EVENT_UNREGISTERED);
-		sendBroadcast(it);
-	}
+    @Override
+    public void onUnregistered(Context context, String registrationId) {
+        _Log.d(TAG, "GCMIntentService: onUnregistered");
+        Intent it = new Intent(MYACTION_NOTIFY);
+        it.putExtra(MYEXTRA_NAME_EVENT, MYEXTRA_EVENT_UNREGISTERED);
+        sendBroadcast(it);
+    }
 
-	@Override
-	public void onError(Context context, String errorId) {
-		_Log.d(TAG, "GCMIntentService: onError errid=" + errorId);
-		Intent it = new Intent(MYACTION_NOTIFY);
-		it.putExtra(MYEXTRA_NAME_EVENT, MYEXTRA_EVENT_ERROR);
-		it.putExtra(MYEXTRA_NAME_ERRORID, errorId);
-		sendBroadcast(it);
-	}
+    @Override
+    public void onError(Context context, String errorId) {
+        _Log.d(TAG, "GCMIntentService: onError errid=" + errorId);
+        Intent it = new Intent(MYACTION_NOTIFY);
+        it.putExtra(MYEXTRA_NAME_EVENT, MYEXTRA_EVENT_ERROR);
+        it.putExtra(MYEXTRA_NAME_ERRORID, errorId);
+        sendBroadcast(it);
+    }
 }
