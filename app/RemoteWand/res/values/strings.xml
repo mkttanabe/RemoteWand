@@ -1,27 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RemoteWand</string>
-    <string name="CopyRightString">Copyright &#169; 2012 KLab Inc.</string>
-    <string name="ServerUrl">https://remotewand-wands.dotcloud.com/push01</string>
-    <string name="WordYes">Yes</string>
-    <string name="WordNo">No</string>
+	<string name="CopyRightString">Copyright &#169; 2012&#8211;2013 KLab Inc.</string>
+	<!--
+	<string name="ServerUrl">https://remotewand-wands.dotcloud.com/push01</string>
+	-->
+	<string name="ServerUrl">https://remotewand.appspot.com/push01</string>
+	<string name="WordYes">Yes</string>
+	<string name="WordNo">No</string>
     <string name="WordAbout">About</string>
-    <string name="WordExit">Exit</string>
-    <string name="WordMailSubject">RemoteWand - Your Form</string>
-    <string name="WordRegisterDevice">Register this device</string>
-    <string name="WordUnregisterDevice">Unregister this device</string>
-    <string name="WordEnterNoSleep">Open the non-sleep screen</string>
-    <string name="WordPassword">Password</string>
+	<string name="WordExit">Exit</string>
+	<string name="WordMailSubject">RemoteWand - Your Form</string>
+	<string name="WordRegisterDevice">Register this device</string>
+	<string name="WordUnregisterDevice">Unregister this device</string>
+	<string name="WordEnterNoSleep">Open the non-sleep screen</string>
+	<string name="WordPassword">Password</string>
     <string name="WordDropboxPage">Google Play : Dropbox page</string>
-    <string name="WordHintPasswordField">Password for registration</string>
+	<string name="WordHintPasswordField">Password for registration</string>
     <string name="MsgNoSleepMode">You will be able to avoid the sleep mode of the device by keeping this screen open. It means that your device will be able to handle messages from the network quickly.\r\n\r\nConnect the power supply to this device.\r\n\r\nPress Back button to exit.</string>
-    <string name="MsgNoDropbox">Dropbox will help you to see the pictures of this device from a distance. You can go to the Google Play page of Dropbox from the App Menu.</string>
-    <string name="MsgSpecifyPassword">Please specify password</string>
-    <string name="MsgRegisterDevice">Register this device?</string>
-    <string name="MsgUnregisterDevice">Unregister this device?</string>
-    <string name="MsgMailText">Please load the attached html file in the browser and then submit the form. The registered Android device will get a notification and will take a picture.\nWhen you want to unregister, run RemoteWand App in your device and press the \"Unregister\" button.</string>
-    <string name="MsgCreateMail">Registration is finished. Next step is to send a e-mail to you that contains the HTML form to push messages through the web browser to this device.\r\n\r\nIf the application list would be displayed after pressing OK button, please select \"Gmail\".</string>
-    <string name="MsgUnregistered">Unregistration is finished.\r\n\r\nNote that it might take a few minutes for the registration ID to be completed removed from the Google server.</string>
-    <string name="MsgHtmlForm">Enter the RemoteWand password that you set at the time of registration, and then press \"PUSH\" button. The camera of the device will take a picture.</string>
-    <string name="MsgOverView">"You'll be able to take pictures through this device's camera remotely via web browser after the registration."</string>
+	<string name="MsgNoDropbox">Dropbox will help you to see the pictures of this device from a distance. You can go to the Google Play page of Dropbox from the App Menu.</string>
+	<string name="MsgSpecifyPassword">Please specify password</string>
+	<string name="MsgRegisterDevice">Register this device?</string>
+	<string name="MsgUnregisterDevice">Unregister this device?</string>
+	<string name="MsgMailText">Please load the attached html file in the browser and then submit the form. The registered Android device will get a notification and will take a picture.\nWhen you want to unregister, run RemoteWand App in your device and press the \"Unregister\" button.</string>
+	<string name="MsgCreateMail">Registration is finished. Next step is to send a e-mail to you that contains the HTML form to push messages through the web browser to this device.\r\n\r\nIf the application list would be displayed after pressing OK button, please select \"Gmail\".</string>
+	<string name="MsgUnregistered">Unregistration is finished.\r\n\r\nNote that it might take a few minutes for the registration ID to be completed removed from the Google server.</string>
+	<string name="MsgHtmlForm">Enter the RemoteWand password that you set at the time of registration, and then press \"PUSH\" button. The camera of the device will take a picture.</string>
+	<string name="MsgOverView">"You'll be able to take pictures through this device's camera remotely via web browser after the registration."</string>
 </resources>
