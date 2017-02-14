@@ -57,6 +57,7 @@ public class MainActivity extends Activity implements OnClickListener {
     private Button mButtonRegister;
     private Button mButtonUnregister;
     private Button mButtonNoSleep;
+    private Button mButtonPolicy;
     private EditText mEditPassword;
     private String mPass;
     private MyBroadcastReceiver mReceiver;
@@ -69,6 +70,7 @@ public class MainActivity extends Activity implements OnClickListener {
         mButtonRegister = (Button)findViewById(R.id.button1);
         mButtonUnregister = (Button)findViewById(R.id.button2);
         mButtonNoSleep = (Button)findViewById(R.id.button3);
+        mButtonPolicy =  (Button)findViewById(R.id.button4);
         mEditPassword = (EditText)findViewById(R.id.editText1);
         mEditPassword.setInputType(InputType.TYPE_CLASS_TEXT |
                 InputType.TYPE_TEXT_VARIATION_EMAIL_ADDRESS );
@@ -76,7 +78,8 @@ public class MainActivity extends Activity implements OnClickListener {
         mButtonRegister.setOnClickListener(this);
         mButtonUnregister.setOnClickListener(this);
         mButtonNoSleep.setOnClickListener(this);
-
+        mButtonPolicy.setOnClickListener(this);
+        
         GCMRegistrar.checkDevice(this);
         GCMRegistrar.checkManifest(this);
         final String regId = GCMRegistrar.getRegistrationId(this);
@@ -196,6 +199,11 @@ public class MainActivity extends Activity implements OnClickListener {
             Intent it = new Intent(getApplicationContext(), NoSleepActivity.class);
             startActivity(it);
             finish();
+        }
+        else if (v == (View)mButtonPolicy) {
+            Uri uri = Uri.parse(getString(R.string.UrlPrivacyPolicy));
+            Intent it = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(it);
         }
     }
     
