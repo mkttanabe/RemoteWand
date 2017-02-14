@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">RemoteWand</string>
-	<string name="CopyRightString">Copyright &#169; 2012&#8211;2013 KLab Inc.</string>
+	<string name="CopyRightString">Copyright &#169; 2012&#8211;2017 KLab Inc.</string>
 	<!--
 	<string name="ServerUrl">https://remotewand-wands.dotcloud.com/push01</string>
 	-->
@@ -14,6 +14,8 @@
 	<string name="WordRegisterDevice">この端末を登録する</string>
 	<string name="WordUnregisterDevice">登録の解除</string>
 	<string name="WordEnterNoSleep">スリープ防止画面へ</string>
+	<string name="WordPrivacyPolicy">プライバシーポリシー</string>
+	<string name="UrlPrivacyPolicy">http://www.klab.com/jp/privacy/</string>
 	<string name="WordPassword">Password</string>
     <string name="WordDropboxPage">Google Play ： Dropbox のページへ</string>
 	<string name="WordHintPasswordField">登録用パスワード</string>

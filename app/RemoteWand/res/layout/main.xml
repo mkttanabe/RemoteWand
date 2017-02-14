@@ -89,4 +89,20 @@
             android:text="@string/WordEnterNoSleep" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout06"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip"
+        android:paddingRight="10dip"
+        android:paddingTop="20dip" >
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/WordPrivacyPolicy" />
+    </LinearLayout>
+    
+    
 </LinearLayout>
